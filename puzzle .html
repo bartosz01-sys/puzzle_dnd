@@ -1,0 +1,107 @@
+<style>
+.grid {
+  display: grid;
+  gap: 1px;
+  grid-template-columns: repeat(3, 1fr);
+  max-width:1000px;
+  margin: auto;
+}
+
+div > div {
+  padding: 10px;
+  aspect-ratio: 1 / 1;
+}
+</style>
+
+<body>
+<div class="grid" id="parent-div">
+  <div id="1" onclick="myFunction(1)" style="background-color:lightblue;">&nbsp</div>
+  <div id="2" onclick="myFunction(2)" style="background-color:lightblue;">&nbsp</div>
+  <div id="3" onclick="myFunction(3)" style="background-color:lightblue;">&nbsp</div>
+  <div id="4" onclick="myFunction(4)" style="background-color:lightblue;">&nbsp</div>
+  <div id="5" onclick="myFunction(5)" style="background-color:tomato;">&nbsp</div>
+  <div id="6" onclick="myFunction(6)" style="background-color:lightblue;">&nbsp</div>
+  <div id="7" onclick="myFunction(7)" style="background-color:lightblue;">&nbsp</div>
+  <div id="8" onclick="myFunction(8)" style="background-color:lightblue;">&nbsp</div>
+  <div id="9" onclick="myFunction(9)" style="background-color:lightblue;">&nbsp</div>  
+</div>
+
+<script>
+function myFunction(number) {
+  switch (number) {
+	case 1:
+		flip("1");
+		flip("2");
+		flip("4");
+    		break;
+	case 2:
+		flip("1");
+		flip("2");
+		flip("3");
+		flip("5");
+    		break;
+	case 3:
+		flip("2");
+		flip("3");
+		flip("6");
+    		break;
+	case 4:
+		flip("1");
+		flip("4");
+		flip("5");
+		flip("7");
+    		break;
+	case 5:
+		flip("2");
+		flip("4");
+		flip("5");
+		flip("6");
+		flip("8");
+    		break;
+	case 6:
+		flip("3");
+		flip("5");
+		flip("6");
+		flip("9");
+    		break;
+	case 7:
+		flip("4");
+		flip("7");
+		flip("8");
+    		break;
+	case 8:
+		flip("5");
+		flip("7");
+		flip("8");
+		flip("9");
+    		break;
+	case 9:
+		flip("6");
+		flip("8");
+		flip("9");
+    		break;
+  }
+}
+function checkWin(){
+	var x = true;
+	const ids = [...document.querySelectorAll('#parent-div > div')].map(({ id }) => id);
+	ids.forEach(function(elementid){
+		if(document.getElementById(elementid).style.backgroundColor == "tomato"){
+			x=false;
+		}
+	});
+	if(x == true){
+	ids.forEach(function(elementid){
+		document.getElementById(elementid).style.backgroundColor = "green";
+	});}
+}
+function flip(id){
+	if(document.getElementById(id).style.backgroundColor == "lightblue"){
+		document.getElementById(id).style.backgroundColor = "tomato";
+	}else{
+		document.getElementById(id).style.backgroundColor = "lightblue";
+	}
+	checkWin();
+}
+</script>
+</body>
