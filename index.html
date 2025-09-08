@@ -1,94 +1,60 @@
+<!doctype html>
+<html>
+  <head>
+    <title>BW dnd puzzles home</title>
 <style>
-.grid {
-  display: grid;
-  gap: 1px;
-  grid-template-columns: repeat(3, 1fr);
-  max-width:1000px;
-  margin: auto;
-}
 
-div > div {
-  padding: 10px;
-  aspect-ratio: 1 / 1;
+.button {
+	display: inline-block;
+	padding: .75rem 1.25rem;
+	border-radius: 10rem;
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 1rem;
+	letter-spacing: .15rem;
+	transition: all .3s;
+	position: relative;
+	overflow: hidden;
+	z-index: 1;
 }
-</style>
-
-<body>
-<div class="grid">
-  <div id="1" onclick="myFunction(1)" style="background-color:lightblue;">&nbsp</div>
-  <div id="2" onclick="myFunction(2)" style="background-color:lightblue;">&nbsp</div>
-  <div id="3" onclick="myFunction(3)" style="background-color:lightblue;">&nbsp</div>
-  <div id="4" onclick="myFunction(4)" style="background-color:lightblue;">&nbsp</div>
-  <div id="5" onclick="myFunction(5)" style="background-color:tomato;">&nbsp</div>
-  <div id="6" onclick="myFunction(6)" style="background-color:lightblue;">&nbsp</div>
-  <div id="7" onclick="myFunction(7)" style="background-color:lightblue;">&nbsp</div>
-  <div id="8" onclick="myFunction(8)" style="background-color:lightblue;">&nbsp</div>
-  <div id="9" onclick="myFunction(9)" style="background-color:lightblue;">&nbsp</div>  
-</div>
-
-<script>
-function myFunction(number) {
-  switch (number) {
-	case 1:
-		flip("1");
-		flip("2");
-		flip("4");
-    		break;
-	case 2:
-		flip("1");
-		flip("2");
-		flip("3");
-		flip("5");
-    		break;
-	case 3:
-		flip("2");
-		flip("3");
-		flip("6");
-    		break;
-	case 4:
-		flip("1");
-		flip("4");
-		flip("5");
-		flip("7");
-    		break;
-	case 5:
-		flip("2");
-		flip("4");
-		flip("5");
-		flip("6");
-		flip("8");
-    		break;
-	case 6:
-		flip("3");
-		flip("5");
-		flip("6");
-		flip("9");
-    		break;
-	case 7:
-		flip("4");
-		flip("7");
-		flip("8");
-    		break;
-	case 8:
-		flip("5");
-		flip("7");
-		flip("8");
-		flip("9");
-    		break;
-	case 9:
-		flip("6");
-		flip("8");
-		flip("9");
-    		break;
-  }
-}
-function flip(id){
-	console.log(id);
-	if(document.getElementById(id).style.backgroundColor == "lightblue"){
-		document.getElementById(id).style.backgroundColor = "tomato";
-	}else{
-		document.getElementById(id).style.backgroundColor = "lightblue";
+.button::after {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: #0cf;
+		border-radius: 10rem;
+		z-index: -2;
+	}
+.button::before {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 0%;
+		height: 100%;
+		background-color: #3df;
+		transition: all .3s;
+		border-radius: 10rem;
+		z-index: -1;
 	}
 }
-</script>
-</body>
+
+body{
+  background-color: #444444;
+}
+</style>
+  </head>
+  <body>
+<div class="container">
+  <a href="https://bartosz01-sys.github.io/puzzle_dnd/puzzle1.html" class="button">Puzzle 1</a>
+  <a href="https://bartosz01-sys.github.io/puzzle_dnd/puzzle2.html" class="button">Puzzle 2</a>
+  <a href="https://bartosz01-sys.github.io/puzzle_dnd/puzzle3.html" class="button">Puzzle 3</a>
+  <a href="https://bartosz01-sys.github.io/puzzle_dnd/puzzle4.html" class="button">Puzzle 4</a>
+  <a href="https://bartosz01-sys.github.io/puzzle_dnd/puzzle5.html" class="button">Puzzle 5</a>
+  <a href="https://bartosz01-sys.github.io/puzzle_dnd/puzzle6.html" class="button">Puzzle 6</a>
+</div>  
+  </body>
+</html>

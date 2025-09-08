@@ -17,17 +17,17 @@ div > div {
 <div class="grid" id="parent-div">
   <div id="1" onclick="myFunction(1)" style="background-color:lightblue;">&nbsp</div>
   <div id="2" onclick="myFunction(2)" style="background-color:lightblue;">&nbsp</div>
-  <div id="3" onclick="myFunction(3)" style="background-color:tomato;">&nbsp</div>
+  <div id="3" onclick="myFunction(3)" style="background-color:lightblue;">&nbsp</div>
   <div id="4" onclick="myFunction(4)" style="background-color:lightblue;">&nbsp</div>
-  <div id="5" onclick="myFunction(5)" style="background-color:tomato;">&nbsp</div>
-  <div id="6" onclick="myFunction(6)" style="background-color:lightblue;">&nbsp</div>
-  <div id="7" onclick="myFunction(7)" style="background-color:lightblue;">&nbsp</div>
+  <div id="5" onclick="myFunction(5)" style="background-color:lightblue;">&nbsp</div>
+  <div id="6" onclick="myFunction(6)" style="background-color:tomato;">&nbsp</div>
+  <div id="7" onclick="myFunction(7)" style="background-color:tomato;">&nbsp</div>
   <div id="8" onclick="myFunction(8)" style="background-color:lightblue;">&nbsp</div>
   <div id="9" onclick="myFunction(9)" style="background-color:lightblue;">&nbsp</div>  
   <div id="10" onclick="myFunction(10)" style="background-color:lightblue;">&nbsp</div>
   <div id="11" onclick="myFunction(11)" style="background-color:lightblue;">&nbsp</div>
   <div id="12" onclick="myFunction(12)" style="background-color:lightblue;">&nbsp</div>
-  <div id="13" onclick="myFunction(13)" style="background-color:lightblue;">&nbsp</div>
+  <div id="13" onclick="myFunction(13)" style="background-color:tomato;">&nbsp</div>
   <div id="14" onclick="myFunction(14)" style="background-color:lightblue;">&nbsp</div>
   <div id="15" onclick="myFunction(15)" style="background-color:lightblue;">&nbsp</div>
   <div id="16" onclick="myFunction(16)" style="background-color:tomato;">&nbsp</div>
@@ -38,98 +38,86 @@ function myFunction(number) {
   switch (number) {
 	case 1:
 		flip("1");
-		flip("2");
-		flip("5");
+		flip("6");
     		break;
 	case 2:
-		flip("1");
 		flip("2");
-		flip("3");
-		flip("6");
+		flip("5");
+		flip("7");
     		break;
 	case 3:
-		flip("2");
 		flip("3");
-		flip("4");
-		flip("7");
+		flip("6");
+		flip("8");
     		break;
 	case 4:
-		flip("3");
 		flip("4");
-		flip("8");
+		flip("7");
     		break;
 	case 5:
-		flip("1");
-		flip("5");
-		flip("6");
-		flip("9");
-    		break;
-	case 6:
 		flip("2");
 		flip("5");
-		flip("6");
-		flip("7");
 		flip("10");
     		break;
-	case 7:
+	case 6:
+		flip("1");
 		flip("3");
 		flip("6");
-		flip("7");
-		flip("8");
+		flip("9");
 		flip("11");
     		break;
-	case 8:
+	case 7:
+		flip("2");
 		flip("4");
 		flip("7");
-		flip("8");
+		flip("10");
 		flip("12");
+    		break;
+	case 8:
+		flip("3");
+		flip("8");
+		flip("11");
     		break;
 	case 9:
-		flip("5");
-		flip("9");
-		flip("10");
-		flip("13");
-    		break;
-	case 10:
 		flip("6");
 		flip("9");
-		flip("10");
-		flip("11");
 		flip("14");
     		break;
-	case 11:
+	case 10:
+		flip("5");
 		flip("7");
 		flip("10");
-		flip("11");
-		flip("12");
+		flip("13");
 		flip("15");
     		break;
-	case 12:
+	case 11:
+		flip("6");
 		flip("8");
 		flip("11");
-		flip("12");
+		flip("14");
 		flip("16");
+    		break;
+	case 12:
+		flip("7");
+		flip("12");
+		flip("15");
     		break;
 	case 13:
-		flip("9");
-		flip("13");
-		flip("14");
-    		break;
-	case 14:
 		flip("10");
 		flip("13");
-		flip("14");
-		flip("15");
     		break;
-	case 15:
+	case 14:
+		flip("9");
 		flip("11");
 		flip("14");
-		flip("15");
-		flip("16");
     		break;
-	case 16:
+	case 15:
+		flip("10");
 		flip("12");
 		flip("15");
+    		break;
+	case 16:
+		flip("11");
 		flip("16");
     		break;
 	}
