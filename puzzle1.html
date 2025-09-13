@@ -84,9 +84,11 @@ function myFunction(number) {
 }
 function checkWin(){
 	var x = true;
+	let color = document.getElementById("1").style.backgroundColor;
+	console.log(color);
 	const ids = [...document.querySelectorAll('#parent-div > div')].map(({ id }) => id);
 	ids.forEach(function(elementid){
-		if(document.getElementById(elementid).style.backgroundColor == "tomato"){
+		if(document.getElementById(elementid).style.backgroundColor != color){
 			x=false;
 		}
 	});
