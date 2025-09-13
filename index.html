@@ -13,9 +13,7 @@
 	text-transform: uppercase;
 	font-size: 1rem;
 	letter-spacing: .15rem;
-	transition: all .3s;
 	position: relative;
-	overflow: hidden;
 	z-index: 1;
 	text-align: center;
 	background-color: #0096FF;
@@ -31,14 +29,19 @@ body{
 
 @media only screen and (max-width: 600px) {
 	.button {
-  		margin: 0 auto; 
+		padding: .75rem 0.4;
+  		margin: auto; 
 		width:100%;
-		border-radius: 0;
+		place-items: stretch;
+		overflow: hidden;
+		border-radius: 0rem;
 	}
 	.container{
+		padding: .75rem 0.4;
 		width:100%;
   		margin: auto; 
 		place-items: stretch;
+		overflow: hidden;
 		
 	}
 }
